@@ -8,8 +8,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
-
-app.use("/images", express.static(path.join(__dirname, "../images")));
+app.use("/images", express.static(path.join(__dirname, "./public/images")));
+console.log(path.join(__dirname, "../public"));
 
 app.get("/", (req, res) => {
   // console.log(path.join(__dirname, "../public"));
@@ -18,10 +18,8 @@ app.get("/", (req, res) => {
       name: "Boiled Egg",
       price: 10,
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      // image: "/images/egg.png",
-      // image: "/images/egg.png",
-      image: "https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbGlmZW9mcGl4MDAwMDEtaW1hZ2VfMS1renhsdXd3ci5wbmc.png",
-
+      image: "/images/egg.png",
+     
       type: "breakfast",
     },
     {
