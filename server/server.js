@@ -12,13 +12,16 @@ app.use(cors());
 app.use("/images", express.static(path.join(__dirname, "../images")));
 
 app.get("/", (req, res) => {
-  console.log(path.join(__dirname, "../public"));
+  // console.log(path.join(__dirname, "../public"));
   const foodData = [
     {
       name: "Boiled Egg",
       price: 10,
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      image: "/images/egg.png",
+      // image: "/images/egg.png",
+      // image: "/images/egg.png",
+      image: "https://www.istockphoto.com/photo/mobile-phones-premium-png-digital-devices-for-mockup-gm1449090516-486379718?utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fpng&utm_medium=affiliate&utm_source=unsplash&utm_term=png%3A%3A%3A",
+
       type: "breakfast",
     },
     {
